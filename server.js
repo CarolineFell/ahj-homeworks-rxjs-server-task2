@@ -81,7 +81,7 @@ setInterval(() => {
     "title": faker.lorem.slug(),
     "author": faker.name.findName(),
     "avatar": faker.image.avatar(),
-    "image": 'https://picsum.photos/500/600',
+    "image": 'https://picsum.photos/800/400?blur',
     "created": Date.now()
   });
   createComment(postId, authorId)
