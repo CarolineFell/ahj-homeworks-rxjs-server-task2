@@ -1,0 +1,40 @@
+{
+  "name": "ahj-homeworks-rxjs",
+  "version": "1.0.0",
+  "description": "rxjs",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "forever server.js",
+    "watch": "forever -w server.js"
+  },
+  "author": "CrolineFell",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "forever": "^2.0.0",
+    "http-event-stream": "^0.2.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "minimist": "^1.2.5",
+    "uuid": "^3.4.0",
+    "ws": "^7.2.1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarolineFell/ahj-homeworks-rxjs-server-task2.git"
+  },
+  "keywords": [
+    "rxjs"
+  ],
+  "bugs": {
+    "url": "https://github.com/CarolineFell/ahj-homeworks-rxjs-server-task2/issues"
+  },
+  "homepage": "https://github.com/CarolineFell/ahj-homeworks-rxjs-server-task2#readme"
+}
