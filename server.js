@@ -46,7 +46,6 @@ app.use(koaBody({
   json: true,
 }));
 
-
 const router = new Router();
 const comments = [];
 let posts = [];
@@ -56,8 +55,8 @@ function randomMinMax(min, max) {
 }
 
 function createComment(postId, authorId) {
-  console.log('creating the comment');
   let number = randomMinMax(1, 10);
+  console.log('creating the comment № ' + number)
 
   for (let i = 0; i < number; i++) {
     comments.unshift({
@@ -89,7 +88,7 @@ setInterval(() => {
 }, 5000);
 
 router.get('/posts/latest', async(ctx, next) => {
-  console.log('get latest posts');
+  console.log('latest posts');
   if (posts.length > 3) {
     posts = posts.slice(0, 10);
   }
@@ -100,8 +99,8 @@ router.get('/posts/latest', async(ctx, next) => {
   }
 });
 
-router.get('/posts/id/comments/latest', async(ctx, next) => {
-  console.log('get latests posts id');
+router.get('/posts/:id/comments/latest', async(ctx, next) => {
+  console.log('latests posts ID #' + ctx.params.id);
   let latestComments = comments.filter((item) => item.author_id === ctx.params.id);
   if (latestComments.length > 3) {
     latestComments = latestComments.slice(-3);
