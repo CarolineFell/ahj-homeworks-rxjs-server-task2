@@ -56,7 +56,7 @@ function randomMinMax(min, max) {
 
 function createComment(postId, authorId) {
   let number = randomMinMax(1, 10);
-  console.log('creating the comment № ' + number)
+  console.log('creating the comment №' + number)
 
   for (let i = 0; i < number; i++) {
     comments.unshift({
@@ -81,7 +81,7 @@ setInterval(() => {
     "title": faker.lorem.slug(),
     "author": faker.name.findName(),
     "avatar": faker.image.avatar(),
-    "image": faker.image.image(),
+    "image": 'https://loremflickr.com/640/360',
     "created": Date.now()
   });
   createComment(postId, authorId)
