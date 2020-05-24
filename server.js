@@ -56,6 +56,7 @@ function randomMinMax(min, max) {
 }
 
 function createComment(postId, authorId) {
+  console.log('creating the comment');
   let number = randomMinMax(1, 10);
 
   for (let i = 0; i < number; i++) {
@@ -88,6 +89,7 @@ setInterval(() => {
 }, 5000);
 
 router.get('/posts/latest', async(ctx, next) => {
+  console.log('get latest posts');
   if (posts.length > 3) {
     posts = posts.slice(0, 10);
   }
@@ -99,6 +101,7 @@ router.get('/posts/latest', async(ctx, next) => {
 });
 
 router.get('/posts/id?=/comments/latest', async(ctx, next) => {
+  gconsole.log('get latests posts id');
   let latestComments = comments.filter((item) => item.author_id === ctx.params.id);
   if (latestComments.length > 3) {
     latestComments = latestComments.slice(-3);
