@@ -100,8 +100,8 @@ router.get('/posts/latest', async(ctx, next) => {
   }
 });
 
-router.get('/posts/id?=/comments/latest', async(ctx, next) => {
-  gconsole.log('get latests posts id');
+router.get('/posts/id/comments/latest', async(ctx, next) => {
+  console.log('get latests posts id');
   let latestComments = comments.filter((item) => item.author_id === ctx.params.id);
   if (latestComments.length > 3) {
     latestComments = latestComments.slice(-3);
